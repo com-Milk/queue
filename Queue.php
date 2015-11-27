@@ -120,6 +120,10 @@ class ConcreteClassRedis
     public function getItemFromQueueRedis(){
         return $this->redis->getFromQueue();
     }
+
+    public function getLenQueue(){
+        return $this->redis->getLenQueue();
+    }
 }
 
 $client = new Predis\Client('tcp://127.0.0.1:6379');

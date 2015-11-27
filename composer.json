@@ -1,12 +1,5 @@
 {
   "require": {
     "predis/predis": "1.0.3"
-  },
-
-    "name": "redis/redis",
-    "type": "library",
-    "version": "1.0.0",
-    "description": "API queue",
-    "homepage": "https://github.com/com-Milk/queue",
-    "license": "Apache-2.0"
+  }
 }
