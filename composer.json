@@ -8,7 +8,7 @@
       }
     ],
     "require": {
-      "queue/queue": "com-Milk"
+      "queue": "master"
     }
   }
 }
