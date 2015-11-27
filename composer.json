@@ -3,10 +3,10 @@
     "predis/predis": "1.0.3"
   },
 
-    "name": "predis/predis",
+    "name": "redis/redis",
     "type": "library",
     "version": "1.0.0",
     "description": "API queue",
-    "homepage": "https://github.com/com-Milk/queue.git",
+    "homepage": "https://github.com/com-Milk/queue",
     "license": "Apache-2.0"
 }
