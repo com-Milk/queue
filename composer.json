@@ -2,7 +2,7 @@
   "require": {
     "predis/predis": "1.0.3"
   },
-  "name": "redis/redis",
+  "name": "com-Milk/redisQueue",
   "type": "library",
   "version": "1.0.1",
   "description": "API queue",
