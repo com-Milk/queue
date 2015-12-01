@@ -1,4 +1,6 @@
 <?php
+namespace QueueRedis;
+use Predis;
 
 /**
  * Class QueueRedis
@@ -12,7 +14,7 @@ class QueueRedis implements QueueInterface
      * @param \Predis\Client $client
      * @param $quename
      */
-    public function __construct(Predis\Client $client, $quename)
+    public function __construct(Client $client, $quename)
     {
         $this->redis = $client;
         $this->quename = $quename;
