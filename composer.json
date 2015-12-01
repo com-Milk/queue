@@ -1,6 +1,6 @@
 {
   "require": {
-    "com-Milk/predis": "~1.0"
+    "predis/predis": "~1.0"
   },
   "name": "com-Milk/redisQueue",
   "type": "library",
