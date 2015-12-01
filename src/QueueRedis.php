@@ -1,32 +1,44 @@
 <?php
+
 /**
- * Created by PhpStorm.
- * User: milk
- * Date: 30.11.15
- * Time: 20:13
+ * Class QueueRedis
  */
-
-
 class QueueRedis implements QueueInterface
 {
-    protected $redisList;
+    protected $redis;
     protected $quename;
 
-    function __construct(Predis\Client $client,$quename){
-        $this->redisList=$client;
+    /**
+     * @param \Predis\Client $client
+     * @param $quename
+     */
+    public function __construct(Predis\Client $client, $quename)
+    {
+        $this->redis = $client;
         $this->quename = $quename;
     }
 
-    public function addToQueue($item){
-        $this->redisList->lpush($this->quename,$item);
+    /**
+     * @param mixed $item
+     */
+    public function addToQueue($item)
+    {
+        $this->redis->lpush($this->quename, $item);
     }
 
-    public function getFromQueue(){
-        return $this->redisList->lpop($this->quename);
+    /**
+     * @return mixed
+     */
+    public function getFromQueue()
+    {
+        return $this->redis->lpop($this->quename);
     }
 
-    public function getLenQueue(){
-        return $this->redisList->llen($this->quename);
+    /**
+     * @return mixed
+     */
+    public function getLenQueue()
+    {
+        return $this->redis->llen($this->quename);
     }
-
 }
