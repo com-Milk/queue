@@ -1,6 +1,6 @@
 {
 
-  "name": "com-Milk/redis",
+  "name": "com-Milk/queue",
   "type": "library",
   "version": "1.0.2",
   "description": "API queue",
