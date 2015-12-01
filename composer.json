@@ -4,7 +4,7 @@
   },
   "name": "com-Milk/redisQueue",
   "type": "library",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "API queue",
   "homepage": "https://github.com/com-Milk/queue",
   "license": "Apache-2.0"
