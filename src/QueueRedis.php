@@ -1,5 +1,6 @@
 <?php
 namespace Queue;
+
 use Predis\Client;
 
 /**
@@ -7,17 +8,20 @@ use Predis\Client;
  */
 class QueueRedis implements QueueInterface
 {
+    /** @var Client */
     protected $redis;
-    protected $quename;
+
+    /** @var string */
+    protected $queueName;
 
     /**
-     * @param \Predis\Client $client
-     * @param $quename
+     * @param Client $client
+     * @param string $queueName
      */
-    public function __construct(Client $client, $quename)
+    public function __construct(Client $client, $queueName)
     {
         $this->redis = $client;
-        $this->quename = $quename;
+        $this->queueName = $queueName;
     }
 
     /**
@@ -25,7 +29,7 @@ class QueueRedis implements QueueInterface
      */
     public function addToQueue($item)
     {
-        $this->redis->lpush($this->quename, $item);
+        $this->redis->lpush($this->queueName, $item);
     }
 
     /**
@@ -33,7 +37,7 @@ class QueueRedis implements QueueInterface
      */
     public function getFromQueue()
     {
-        return $this->redis->lpop($this->quename);
+        return $this->redis->lpop($this->queueName);
     }
 
     /**
@@ -41,6 +45,6 @@ class QueueRedis implements QueueInterface
      */
     public function getLenQueue()
     {
-        return $this->redis->llen($this->quename);
+        return $this->redis->llen($this->queueName);
     }
 }

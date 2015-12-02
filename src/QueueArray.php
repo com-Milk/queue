@@ -6,10 +6,8 @@ namespace Queue;
  */
 class QueueArray implements QueueInterface
 {
-    /**
-     * @var array
-     */
-    protected $queueList=[];
+    /** @var array */
+    protected $queueList = [];
 
     /**
      * @param mixed $item
