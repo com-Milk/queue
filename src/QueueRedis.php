@@ -1,5 +1,5 @@
 <?php
-namespace QueueRedis;
+namespace Queue;
 use Predis;
 
 /**

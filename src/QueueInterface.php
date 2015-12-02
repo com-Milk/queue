@@ -1,4 +1,5 @@
 <?php
+namespace Queue;
 /**
  * Interface QueuesInterface
  */
