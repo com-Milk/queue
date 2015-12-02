@@ -1,6 +1,6 @@
 <?php
 namespace Queue;
-use Predis;
+use Predis\Client;
 
 /**
  * Class QueueRedis
